@@ -13,7 +13,7 @@ else
 fi
 
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
-  openssh ripgrep tldr --noconfirm
+  openssh ripgrep tldr btop nodejs npm --noconfirm
 
 echo "installing yay"
 git clone https://aur.archlinux.org/yay-bin.git
