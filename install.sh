@@ -13,7 +13,7 @@ else
 fi
 
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
-  openssh ripgrep tldr btop nodejs npm --noconfirm
+  openssh ripgrep tldr btop nodejs npm unzip --noconfirm
 
 cp -R ./.ssh ~/
 
