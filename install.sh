@@ -12,6 +12,7 @@ else
     fi
 fi
 
+sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd --noconfirm
 
