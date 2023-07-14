@@ -15,7 +15,7 @@ fi
 sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
-  --noconfirm
+  man-pages --noconfirm
 
 cp -R ./.ssh ~/
 
