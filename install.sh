@@ -32,3 +32,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 git clone git@github.com:tleoutline/astronvim_config.git ~/.config/nvim/lua/user/lua/user/
+
+echo "installing nnn plugins"
+sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
+
+cp ./.profile ~/.profile
+cp ./.ssh ~/.ssh
