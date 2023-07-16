@@ -37,4 +37,4 @@ echo "installing nnn plugins"
 sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 
 cp ./.profile ~/.profile
-cp ./.ssh ~/.ssh
+cp -r ./.ssh ~/.ssh
