@@ -17,8 +17,6 @@ sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
   man-pages --noconfirm
 
-cp -R ./.ssh ~/
-
 echo "installing yay"
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
@@ -37,4 +35,6 @@ echo "installing nnn plugins"
 sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 
 cp ./.profile ~/.profile
-cp -r ./.ssh ~/.ssh
+cp -r ./.ssh ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/gh-key
