@@ -17,6 +17,11 @@ sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
   man-pages --noconfirm
 
+echo "configuring git"
+git config --global user.name "tleoutline"
+git config --global user.email "tleoutline@gmail.com"
+
+
 echo "installing yay"
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
