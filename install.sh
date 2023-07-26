@@ -15,7 +15,7 @@ fi
 sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
-  man-pages zsh-syntax-highlighting zsh-autosuggestions --noconfirm
+  man-pages zsh-autosuggestions --noconfirm
 
 echo "configuring git"
 git config --global user.name "tleoutline"
@@ -32,6 +32,7 @@ rm -r yay-bin
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
