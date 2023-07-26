@@ -28,6 +28,7 @@ cd yay-bin
 makepkg -si
 cd ..
 yay -Sy
+rm -r yay-bin
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
