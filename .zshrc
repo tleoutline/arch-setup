@@ -1,4 +1,5 @@
 . ~/.profile
+. ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 

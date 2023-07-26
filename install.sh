@@ -33,6 +33,12 @@ rm -r yay-bin
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
+cd zsh-syntax-highlighting/themes/
+mkdir ~/.zsh/
+cp -v ./* ~/.zsh/
+cd ../..
+rm zsh-syntax-highlighting
 
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
