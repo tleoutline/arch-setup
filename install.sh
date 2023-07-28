@@ -29,6 +29,7 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 yay -Syu
+yay -S code-minimap
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
