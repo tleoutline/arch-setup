@@ -1,5 +1,5 @@
-alias v='nvim'
-alias lzg='lazygit'
+alias -g v='nvim'
+alias -g lzg='lazygit'
 
 export EDITOR="$(which nvim)"
 
