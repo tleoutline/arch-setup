@@ -2,6 +2,7 @@ alias -g v='nvim'
 alias -g lzg='lazygit'
 
 export EDITOR="$(which nvim)"
+export FZF_DEFAULT_COMMAND = "find /* -type f"
 
 n ()
 {
