@@ -39,7 +39,7 @@ cd zsh-syntax-highlighting/themes/
 mkdir ~/.zsh/
 cp -v ./* ~/.zsh/
 cd ../..
-rm zsh-syntax-highlighting
+sudo rm -r zsh-syntax-highlighting
 
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
