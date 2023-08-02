@@ -15,7 +15,7 @@ fi
 sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
-  man-pages zsh-autosuggestions --noconfirm
+  man-pages zsh-autosuggestions man-db --noconfirm
 
 echo "configuring git"
 git config --global user.name "tleoutline"
