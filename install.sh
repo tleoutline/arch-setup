@@ -16,7 +16,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
   man-pages zsh-autosuggestions man-db entr python-pip python-libtmux \
-  --noconfirm
+  tmux --noconfirm
 
 echo "configuring git"
 git config --global user.name "tleoutline"
@@ -41,6 +41,10 @@ mkdir ~/.zsh/
 cp -v ./* ~/.zsh/
 cd ../..
 sudo rm -r zsh-syntax-highlighting
+
+echo "installing tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+cp ./tmux.conf ~/.config/tmux/tmux.conf
 
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
