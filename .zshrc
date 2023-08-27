@@ -1,5 +1,9 @@
 . ~/.profile
 . ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+ZSH_CACHE=~/.cache/zsh/
+HISTFILE=$ZSH_CACHE/zsh_history
+ZSH_COMPDUMP=$ZSH_CACHE/zcompdump
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
