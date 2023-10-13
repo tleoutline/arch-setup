@@ -1,4 +1,5 @@
 alias -g v='nvim'
+alias -g vs='sudo -E nvim'
 alias -g lzg='lazygit'
 
 export EDITOR="$(which nvim)"
