@@ -53,6 +53,11 @@ git clone git@github.com:tleoutline/astronvim_config.git ~/.config/nvim/lua/user
 echo "installing nnn plugins"
 sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 
+echo "installing btop themes"
+git clone https://github.com/catppuccin/btop.git
+cp ./btop/themes/* ~/.config/btop/themes/
+rm -rf btop
+
 cp ./.profile ~/.profile
 cp -r ./.ssh ~
 chmod 700 ~/.ssh
