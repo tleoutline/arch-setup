@@ -65,3 +65,23 @@ t() {
     return 1
   fi
 }
+
+ta() {
+  if [ $# -eq 0 ]; then
+    tre -al 1
+  elif [ $# -eq 1 ] && [ "$1" -eq "$1" ] 2>/dev/null; then
+    tre -al "$1"
+  else
+    echo "Invalid argument. Usage: ta [n]"
+    return 1
+  fi
+}
+
+# Install packages using yay (change to pacman/AUR helper of your choice)
+yayin() {
+    yay -Slq | fzf -q "$1" -m --preview 'yay -Si {1}'| xargs -ro yay -S
+}
+# Remove installed packages (change to pacman/AUR helper of your choice)
+yayrm() {
+    yay -Qq | fzf -q "$1" -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns
+}
