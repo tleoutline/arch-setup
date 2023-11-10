@@ -82,6 +82,10 @@ VI_MODE_SET_CURSOR=true
 
 source $ZSH/oh-my-zsh.sh
 
+. ~/.script/nnn.sh
+. ~/.script/tre.sh
+. ~/.script/fzf/*
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
