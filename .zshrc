@@ -84,7 +84,9 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.script/nnn.sh
 . ~/.script/tre.sh
-. ~/.script/fzf/*
+for file in ~/.script/fzf/*; do
+  . "$file"
+done
 
 # User configuration
 
