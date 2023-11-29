@@ -35,7 +35,6 @@ yay -S code-minimap lsd --noconfirm
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/yuhonas/zsh-aliases-lsd ${ZSH_CUSTOM}/plugins/zsh-aliases-lsd
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting/themes/
 mkdir ~/.zsh/

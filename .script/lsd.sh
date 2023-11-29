@@ -1,0 +1,5 @@
+alias ls='lsd --group-dirs=first'
+alias l='lsd --almost-all --long --group-dirs=first'
+alias llm='lsd --timesort --long --group-dirs=first'
+alias lS='lsd --oneline --classic --group-dirs=first'
+alias lt='lsd --tree --depth=2 --group-dirs=first'
