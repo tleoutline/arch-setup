@@ -41,6 +41,7 @@ mkdir ~/.zsh/
 cp -v ./* ~/.zsh/
 cd ../..
 sudo rm -r zsh-syntax-highlighting
+cp ./starship.toml ~/.config/starship.toml
 
 echo "installing tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

@@ -1,0 +1,20 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[directory]
+
+truncation_symbol = '../'
+
+[custom.cpp]
+
+format = 'via [$symbol(v$output-g++)]($style)'
+command = '''g++ --version | rg -oP "(?<=g\+\+ \(GCC\) )\d+\.\d+\.\d+"'''
+detect_extensions = ['cpp', 'hpp']
+symbol = '++ '
+style = 'bold blue'
+
+[c]
+
+symbol = ' '
+style = 'bold blue'
