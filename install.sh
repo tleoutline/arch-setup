@@ -16,7 +16,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S git lazygit fzf neovim starship zsh nnn zoxide base-devel \
   openssh ripgrep tldr btop nodejs npm unzip iwd ttf-jetbrains-mono-nerd \
   man-pages zsh-autosuggestions man-db entr python-pip python-libtmux \
-  tmux bat autoenv-git --noconfirm
+  tmux bat --noconfirm
 
 echo "configuring git"
 git config --global user.name "tleoutline"
@@ -30,7 +30,7 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 yay -Syu --noconfirm
-yay -S code-minimap lsd --noconfirm
+yay -S code-minimap lsd autoenv-git --noconfirm
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
