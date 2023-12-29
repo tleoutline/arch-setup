@@ -85,6 +85,10 @@ source $ZSH/oh-my-zsh.sh
 . ~/.script/nnn.sh
 . ~/.script/tre.sh
 . ~/.script/lsd.sh
+. ~/.script/autoenv.sh
+for file in ~/.script/fzf/*; do
+  . "$file"
+done
 for file in ~/.script/fzf/*; do
   . "$file"
 done
