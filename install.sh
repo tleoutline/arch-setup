@@ -1,5 +1,18 @@
 #!/bin/sh
 
+prompt() {
+    local prompt="$1"
+    local userInput
+
+    read -p "$prompt (Y/n): " userInput
+
+    if [[ -z "$userInput" || "$userInput" =~ ^[Yy]$ ]]; then
+        echo "true"
+    else
+        echo "false"
+    fi
+}
+
 if pacman -Qi sudo &> /dev/null; then
     echo "sudo is already installed."
 else
@@ -22,6 +35,8 @@ echo "configuring git"
 git config --global user.name "tleoutline"
 git config --global user.email "tleoutline@gmail.com"
 
+DOTFILES_PATH="~/.config/dotfiles"
+git clone git@github.com:/tleoutline/arch-dotfiles.git $DOTFILES_PATH
 
 echo "installing yay"
 git clone https://aur.archlinux.org/yay-bin.git
@@ -41,11 +56,19 @@ mkdir ~/.zsh/
 cp -v ./* ~/.zsh/
 cd ../..
 sudo rm -r zsh-syntax-highlighting
-cp ./starship.toml ~/.config/starship.toml
+if [ $(prompt "install .zshrc?")  == "true"]; then
+    ln -s $DOTFILES_PATH/.zshrc ~/.zshrc
+if
+
+if [ $(prompt "install starship.toml?")  == "true"]; then
+    ln -s $DOTFILES_PATH/starship.toml ~/.config/starship.toml
+fi
 
 echo "installing tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-cp ./tmux.conf ~/.config/tmux/tmux.conf
+if [ $(prompt "install tmux config files?")  == "true"]; then
+    ln -s $DOTFILES_PATH/tmux.conf ~/.config/tmux/tmux.conf
+fi
 
 echo "installing astronvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
@@ -59,7 +82,11 @@ git clone https://github.com/catppuccin/btop.git
 cp ./btop/themes/* ~/.config/btop/themes/
 rm -rf btop
 
-cp ./.profile ~/.profile
-cp -r ./.ssh ~
+if [ $(prompt "install .profile?")  == "true"]; then
+    ln -s $DOTFILES_PATH/.profile ~/.profile
+fi
+
+if [ $(prompt "install ssh config?")  == "true"]; then
+    ln -s $DOTFILES_PATH/.sss/config ~/.ssh/config
+fi
 chmod 700 ~/.ssh
-chmod 600 ~/.ssh/gh-key
