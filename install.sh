@@ -51,10 +51,11 @@ echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/urbainvaes/fzf-marks.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-marks
+
+mkdir -p ~/.config/zsh/
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting/themes/
-mkdir ~/.zsh/
-cp -v ./* ~/.zsh/
+cp -v ./* ~/.config/zsh/
 cd ../..
 sudo rm -r zsh-syntax-highlighting
 if [ $(prompt "install .zshrc?")  == "true"]; then
